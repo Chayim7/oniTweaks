@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - OniTweaks Optimization Articles{% endblock %}
+{% block description %}Articles and insights about Fortnite optimization, performance tuning, and competitive gaming.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="blog-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Blog & Insights</h1>
+            <p>Expert articles on Fortnite optimization and competitive performance</p>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Article -->
+<section class="featured-article-section">
+    <div class="container">
+        <article class="featured-article" data-aos="fade-up">
+            <div class="article-image-placeholder">
+                <span>Featured Article</span>
+            </div>
+
+            <div class="article-content">
+                <h2>The Complete Guide to Reducing Input Delay in Fortnite</h2>
+                <p class="article-meta">
+                    <span class="article-date">April 10, 2025</span>
+                    <span class="article-category">Performance</span>
+                </p>
+                <p class="article-excerpt">
+                    Input delay is one of the most misunderstood performance factors in competitive gaming. 
+                    In this comprehensive guide, we break down what causes input lag, how different system 
+                    settings affect it, and what genuine optimizations actually work.
+                </p>
+                <a href="/guides/reduce-input-delay" class="btn btn-primary">Read Full Article</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Articles Grid -->
+<section class="blog-articles-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Latest Articles</h2>
+
+        <div class="articles-grid">
+            <article class="article-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="article-image-small">
+                    <span>🎮</span>
+                </div>
+                <h3>Controller Settings: The Right Way</h3>
+                <p class="article-meta">
+                    <span>March 28, 2025</span>
+                </p>
+                <p>Discover the controller settings that competitive players use and why each setting matters.</p>
+                <a href="/guides/controller-settings" class="article-link">Read More →</a>
+            </article>
+
+            <article class="article-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="article-image-small">
+                    <span>📈</span>
+                </div>
+                <h3>FPS vs Consistency: Which Matters More?</h3>
+                <p class="article-meta">
+                    <span>March 25, 2025</span>
+                </p>
+                <p>Explore the balance between raw FPS and frame time consistency in competitive gaming.</p>
+                <a href="/guides/fps-boost" class="article-link">Read More →</a>
+            </article>
+
+            <article class="article-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="article-image-small">
+                    <span>🖥️</span>
+                </div>
+                <h3>GPU Settings Breakdown: What Actually Matters</h3>
+                <p class="article-meta">
+                    <span>March 22, 2025</span>
+                </p>
+                <p>Learn which GPU settings impact performance, which are marketing fluff, and how to optimize.</p>
+                <a href="/guides/gpu-settings" class="article-link">Read More →</a>
+            </article>
+
+            <article class="article-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="article-image-small">
+                    <span>🌐</span>
+                </div>
+                <h3>Network Optimization: Beyond Ping</h3>
+                <p class="article-meta">
+                    <span>March 18, 2025</span>
+                </p>
+                <p>Network quality is more than just ping. Understand packet loss, jitter, and optimization strategies.</p>
+                <a href="/guides/network-optimization" class="article-link">Read More →</a>
+            </article>
+
+            <article class="article-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="article-image-small">
+                    <span>⚙️</span>
+                </div>
+                <h3>Advanced Tweaks: Going Beyond the Basics</h3>
+                <p class="article-meta">
+                    <span>March 15, 2025</span>
+                </p>
+                <p>Explore advanced optimization techniques for users who want to maximize every detail.</p>
+                <a href="/guides/advanced-tweaks" class="article-link">Read More →</a>
+            </article>
+
+            <article class="article-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="article-image-small">
+                    <span>🔧</span>
+                </div>
+                <h3>Common Optimization Mistakes</h3>
+                <p class="article-meta">
+                    <span>March 12, 2025</span>
+                </p>
+                <p>Avoid these common pitfalls that most players make when trying to optimize their Fortnite experience.</p>
+                <a href="/blog" class="article-link">Read More →</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content" data-aos="fade-up">
+            <h2>Get Optimization Tips Weekly</h2>
+            <p>Subscribe to our newsletter for performance insights, new articles, and pack updates.</p>
+
+            <form class="newsletter-form" onsubmit="handleNewsletterSignup(event)">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+
+            <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="blog-cta-section">
+    <div class="container">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>All This Knowledge Makes You Ready</h2>
+            <p>Understand the "why" through guides, then apply exact configurations with our premium packs</p>
+            <a href="/packs" class="btn btn-primary">Explore Packs</a>
+        </div>
+    </div>
+
+    <div class="cta-bg-accent"></div>
+</section>
+
+<script>
+function handleNewsletterSignup(event) {
+    event.preventDefault();
+    const email = event.target.querySelector('input[type="email"]').value;
+    alert('Thank you for subscribing: ' + email);
+    event.target.reset();
+    // TODO: Connect to newsletter service (Mailchimp, ConvertKit, etc.)
+}
+</script>
+
+{% endblock %}

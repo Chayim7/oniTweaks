@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}Network Optimization Guide | OniTweaks{% endblock %}
+{% block description %}Guide to network optimization, reducing ping, and improving online competitive experience in Fortnite.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="guide-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>{{ guide.title }}</h1>
+            <p>Optimize your connection for competitive online gaming</p>
+        </div>
+    </div>
+</section>
+
+<!-- Guide Content -->
+<section class="guide-content-section">
+    <div class="container">
+        <div class="guide-wrapper">
+            <!-- Main Content -->
+            <div class="guide-main">
+                <article class="guide-article" data-aos="fade-up">
+                    <h2>Understanding Network Quality</h2>
+                    <p>
+                        Network quality in online gaming is more than just ping. Your connection affects latency, 
+                        packet loss, jitter, and overall responsiveness. All of these matter for competitive performance.
+                    </p>
+                    <p>
+                        Unlike offline games where your computer handles all calculations, online games depend on 
+                        communicating with servers. A poor connection can offset any hardware optimization.
+                    </p>
+
+                    <h2>Network Performance Metrics</h2>
+                    <p>
+                        These metrics determine your actual online performance:
+                    </p>
+
+                    <div class="guide-card">
+                        <h3>Ping (Latency)</h3>
+                        <p>
+                            Milliseconds to reach the server. Lower is better. Competitive players typically have 
+                            20-80ms ping depending on location. Under 50ms is ideal.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Packet Loss</h3>
+                        <p>
+                            Percentage of data packets lost during transmission. Even 1% packet loss noticeably impacts 
+                            gameplay. Any packet loss is problematic.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Jitter</h3>
+                        <p>
+                            Variation in ping over time. Variable ping (40ms to 80ms swinging) feels worse than stable ping.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Bandwidth</h3>
+                        <p>
+                            Total data throughput. Fortnite needs surprisingly little bandwidth (1-10 Mbps), so this matters 
+                            less than connection stability.
+                        </p>
+                    </div>
+
+                    <h2>Why Network Quality Matters for Fortnite</h2>
+                    <p>
+                        Fortnite is particularly sensitive to network quality because:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Real-time Responses:</strong> Building and aiming require instant server communication</li>
+                        <li><strong>Player Interactions:</strong> Other players' actions depend on reliable data transmission</li>
+                        <li><strong>Combat Decisions:</strong> Your shots, edits, and actions go through the server</li>
+                        <li><strong>Consistency:</strong> Variable latency creates unpredictable gameplay</li>
+                    </ul>
+
+                    <h2>Wired vs Wireless Connection</h2>
+                    <p>
+                        Connection type significantly impacts quality:
+                    </p>
+
+                    <div class="guide-card">
+                        <h3>Wired (Ethernet)</h3>
+                        <p>
+                            Direct cable connection to your router. Most stable, lowest latency, minimal jitter.
+                            Recommended for competitive gaming.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>WiFi</h3>
+                        <p>
+                            Wireless connection. More convenient but less stable. Variable latency and potential interference.
+                            Avoid for competitive play if possible.
+                        </p>
+                    </div>
+
+                    <h2>Network Optimization Strategies</h2>
+                    <p>
+                        These steps improve network quality:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Use Wired Connection:</strong> Ethernet cable directly to router greatly improves stability</li>
+                        <li><strong>Optimize Router:</strong> Place closer to gaming location, reduce interference</li>
+                        <li><strong>Close Background Apps:</strong> Bandwidth hoggers (downloads, updates, streaming)</li>
+                        <li><strong>DNS Settings:</strong> Better DNS can slightly reduce latency</li>
+                        <li><strong>Quality ISP:</strong> Some ISPs have better routing to game servers</li>
+                        <li><strong>Server Selection:</strong> Choose closest regional servers in game settings</li>
+                    </ul>
+
+                    <h2>What You Can't Control</h2>
+                    <p>
+                        Some network factors are beyond your control:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Geographic Location:</strong> Distance to nearest server determines baseline ping</li>
+                        <li><strong>ISP Routes:</strong> How your ISP routes traffic to Fortnite servers</li>
+                        <li><strong>Server Load:</strong> Epic's server status on a given day</li>
+                    </ul>
+
+                    <h2>Common Network Mistakes</h2>
+                    <p>
+                        Most players make these network optimization errors:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Using WiFi for Competitive:</strong> Wireless adds unnecessary instability</li>
+                        <li><strong>Running Background Services:</strong> Downloads or updates consuming bandwidth</li>
+                        <li><strong>Accepting High Ping:</strong> Thinking 100+ ping is normal for their location</li>
+                        <li><strong>Not Monitoring Connection:</strong> Unaware of network issues affecting gameplay</li>
+                    </ul>
+
+                    <h2>What's Included in Our Pack</h2>
+                    <p>
+                        Our Network Optimization guide covers:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Detailed network diagnostics and testing</li>
+                        <li>Router optimization strategies</li>
+                        <li>ISP and connection troubleshooting</li>
+                        <li>Network monitoring tools and methods</li>
+                        <li>Server selection and regional optimization</li>
+                    </ul>
+
+                    <div class="guide-cta" data-aos="fade-up">
+                        <h3>Ready to Optimize Your Network?</h3>
+                        <p>Get our Network Optimization guide for connection improvement strategies.</p>
+                        <a href="/packs" class="btn btn-primary">View Packs</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="guide-sidebar" data-aos="fade-up" data-aos-delay="100">
+                <div class="sidebar-card">
+                    <h3>Quick Navigation</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#network">Understanding Network</a></li>
+                        <li><a href="#metrics">Network Metrics</a></li>
+                        <li><a href="#why">Why It Matters</a></li>
+                        <li><a href="#wired">Wired vs Wireless</a></li>
+                        <li><a href="#strategies">Optimization</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Guides</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="/guides/reduce-input-delay">Input Delay</a></li>
+                        <li><a href="/guides/advanced-tweaks">Advanced Tweaks</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card cta-card">
+                    <h3>Input Delay Pack</h3>
+                    <p>Includes network optimization strategies.</p>
+                    <a href="/packs" class="btn btn-primary btn-block">Learn More</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

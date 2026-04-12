@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}FPS Boost & Stability Guide | OniTweaks{% endblock %}
+{% block description %}Guide to boosting FPS and stabilizing frame rates in Fortnite for consistent competitive performance.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="guide-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>{{ guide.title }}</h1>
+            <p>Increase frames and stabilize performance for competitive gameplay</p>
+        </div>
+    </div>
+</section>
+
+<!-- Guide Content -->
+<section class="guide-content-section">
+    <div class="container">
+        <div class="guide-wrapper">
+            <!-- Main Content -->
+            <div class="guide-main">
+                <article class="guide-article" data-aos="fade-up">
+                    <h2>Understanding FPS and Frame Times</h2>
+                    <p>
+                        FPS (Frames Per Second) measures how many images your system renders per second. 
+                        Higher FPS feels smoother and reduces input delay. But consistency matters as much as quantity.
+                    </p>
+                    <p>
+                        Frame time (milliseconds per frame) is often more important than raw FPS. Stable 60ms frame times 
+                        (60 FPS) feels better than 30-120 FPS with variable timing.
+                    </p>
+
+                    <h2>Why FPS Matters in Fortnite</h2>
+                    <p>
+                        Consistent high FPS provides competitive advantages:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Smoother Visuals:</strong> More frames = smoother camera movement</li>
+                        <li><strong>Input Responsiveness:</strong> Higher FPS reduces input-to-response time</li>
+                        <li><strong>Reduced Motion Blur:</strong> More frames per motion reduce blur perception</li>
+                        <li><strong>Better Tracking:</strong> Smoother motion makes target tracking easier</li>
+                    </ul>
+
+                    <h2>FPS vs Consistency</h2>
+                    <p>
+                        Both matter, but consistency is often overlooked:
+                    </p>
+
+                    <div class="guide-card">
+                        <h3>High But Unstable FPS</h3>
+                        <p>
+                            Swinging between 80-160 FPS feels inconsistent and unpredictable. Your aim will feel different 
+                            from moment to moment.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Lower But Stable FPS</h3>
+                        <p>
+                            Consistent 90 FPS feels much better than variable 90-150 FPS because your responses remain predictable.
+                        </p>
+                    </div>
+
+                    <h2>Key Performance Factors</h2>
+                    <p>
+                        These factors most significantly affect FPS in Fortnite:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>GPU Power:</strong> Graphics processing is the primary FPS limiter</li>
+                        <li><strong>CPU Speed:</strong> Faster processors help with frame consistency</li>
+                        <li><strong>RAM Amount:</strong> Adequate RAM prevents stuttering (16GB+ recommended)</li>
+                        <li><strong>VRAM:</strong> Video memory on your GPU directly limits frame rates at resolution</li>
+                        <li><strong>Storage Speed:</strong> Slow storage causes hitches and stuttering</li>
+                    </ul>
+
+                    <h2>What Actually Boosts FPS</h2>
+                    <p>
+                        These optimizations create meaningful FPS improvements:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Lower Resolution:</strong> Reduced pixel count dramatically increases FPS</li>
+                        <li><strong>Lower Graphical Settings:</strong> Fewer render effects = higher frame rates</li>
+                        <li><strong>Driver Updates:</strong> GPU driver optimization improves performance</li>
+                        <li><strong>Disable Background Apps:</strong> Frees resources for gaming</li>
+                        <li><strong>System Defragmentation:</strong> Faster data access improves consistency</li>
+                    </ul>
+
+                    <h2>Quality vs Performance Tradeoffs</h2>
+                    <p>
+                        You must choose where on the quality spectrum to sit:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Ultra/High Settings:</strong> Better visuals, lower FPS, harder to maintain consistency</li>
+                        <li><strong>Medium Settings:</strong> Balanced visuals and performance</li>
+                        <li><strong>Low Settings:</strong> Prioritizes FPS for competitive consistency</li>
+                    </ul>
+
+                    <h2>Common FPS Killing Mistakes</h2>
+                    <p>
+                        Most players make FPS performance worse by:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Maxing All Settings:</strong> Expecting high FPS with maximum graphics</li>
+                        <li><strong>Running Too Many Background Apps:</strong> Competing for system resources</li>
+                        <li><strong>Using HDR:</strong> Requires more processing overhead</li>
+                        <li><strong>Ignoring Driver Updates:</strong> Missing performance optimizations</li>
+                    </ul>
+
+                    <h2>Why Incomplete Optimization Fails</h2>
+                    <p>
+                        Simply lowering graphics settings isn't always enough. Effective FPS optimization requires:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Understanding GPU vs CPU limitations</li>
+                        <li>Balancing visual fidelity with performance needs</li>
+                        <li>System-wide resource optimization</li>
+                        <li>Maintaining stability across gaming sessions</li>
+                    </ul>
+
+                    <h2>What's Included in Our Pack</h2>
+                    <p>
+                        Our FPS Boost Pack provides systematic optimization:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Game settings configurations for target FPS (60/90/120/144+)</li>
+                        <li>GPU driver optimization strategies</li>
+                        <li>System resource management</li>
+                        <li>FPS consistency tuning</li>
+                        <li>Performance monitoring and testing methods</li>
+                    </ul>
+
+                    <div class="guide-cta" data-aos="fade-up">
+                        <h3>Ready to Boost Your FPS?</h3>
+                        <p>Get our FPS Boost Pack for proven performance optimization strategies.</p>
+                        <a href="/packs" class="btn btn-primary">View Packs</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="guide-sidebar" data-aos="fade-up" data-aos-delay="100">
+                <div class="sidebar-card">
+                    <h3>Quick Navigation</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#fps">Understanding FPS</a></li>
+                        <li><a href="#why">Why FPS Matters</a></li>
+                        <li><a href="#consistency">Consistency</a></li>
+                        <li><a href="#factors">Key Factors</a></li>
+                        <li><a href="#actual">Actual Boosters</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Guides</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="/guides/gpu-settings">GPU Settings</a></li>
+                        <li><a href="/guides/advanced-tweaks">Advanced Tweaks</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card cta-card">
+                    <h3>FPS Boost Pack</h3>
+                    <p>Complete FPS optimization and stability configuration.</p>
+                    <a href="/packs" class="btn btn-primary btn-block">Learn More</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

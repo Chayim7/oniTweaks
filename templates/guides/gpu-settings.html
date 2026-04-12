@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}GPU Settings Guide | OniTweaks{% endblock %}
+{% block description %}Complete guide to GPU settings, optimization, and performance vs quality tradeoffs for Fortnite.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="guide-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>{{ guide.title }}</h1>
+            <p>Optimize your graphics card for maximum performance</p>
+        </div>
+    </div>
+</section>
+
+<!-- Guide Content -->
+<section class="guide-content-section">
+    <div class="container">
+        <div class="guide-wrapper">
+            <!-- Main Content -->
+            <div class="guide-main">
+                <article class="guide-article" data-aos="fade-up">
+                    <h2>Understanding Your GPU</h2>
+                    <p>
+                        Your GPU (Graphics Processing Unit) is dedicated hardware for rendering graphics. 
+                        GPU settings in Fortnite control how the graphics card renders the game world.
+                    </p>
+                    <p>
+                        Different GPU settings have different performance costs. Understanding the tradeoffs 
+                        lets you optimize for competitive performance while maintaining acceptable visuals.
+                    </p>
+
+                    <h2>GPU Settings Categories</h2>
+                    <p>
+                        Fortnite GPU settings fall into several categories with different impact levels:
+                    </p>
+
+                    <div class="guide-card">
+                        <h3>Resolution</h3>
+                        <p>
+                            The pixel count of your image. 1080p vs 1440p vs 4K drastically affects FPS. 
+                            Most competitive players use 1080p for maximum FPS.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Rendering Scale</h3>
+                        <p>
+                            Changes the internal rendering resolution before scaling to your display. 
+                            Can improve performance at slight quality cost.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Shadow Quality</h3>
+                        <p>
+                            Controls shadow detail and performance. High shadows look better but cost significant FPS.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Texture Quality</h3>
+                        <p>
+                            Affects visual detail on surfaces. Medium settings often provide good visuals with acceptable performance.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Effects Quality</h3>
+                        <p>
+                            Controls explosions, weapon effects, and visual clarity. Lower settings reduce visual clutter 
+                            and improve FPS.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Post-Processing</h3>
+                        <p>
+                            Includes bloom, HDR, and color grading. Can be disabled for performance with minimal visual impact.
+                        </p>
+                    </div>
+
+                    <h2>Performance Impact Hierarchy</h2>
+                    <p>
+                        Not all settings are equal. Here's the impact order (highest to lowest):
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Resolution:</strong> Massive impact (30-50% of performance)</li>
+                        <li><strong>Rendering Scale:</strong> High impact (15-25%)</li>
+                        <li><strong>Shadow Quality:</strong> High impact (10-20%)</li>
+                        <li><strong>Texture Quality:</strong> Medium impact (5-10%)</li>
+                        <li><strong>Effects Quality:</strong> Medium impact (5-10%)</li>
+                        <li><strong>Post-Processing:</strong> Low impact (1-5%)</li>
+                    </ul>
+
+                    <h2>The Competitive Settings Approach</h2>
+                    <p>
+                        Competitive players typically prioritize FPS over visuals:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Resolution:</strong> Native (don't upscale), typically 1920x1080</li>
+                        <li><strong>Rendering Scale:</strong> 100% or slightly lower for headroom</li>
+                        <li><strong>Shadow Quality:</strong> Low (shadows don't affect gameplay)</li>
+                        <li><strong>Texture Quality:</strong> Medium (balanced)</li>
+                        <li><strong>Effects Quality:</strong> High (can help see enemies better)</li>
+                        <li><strong>Post-Processing:</strong> Off (no visual benefit)</li>
+                    </ul>
+
+                    <h2>GPU Driver Optimization</h2>
+                    <p>
+                        Your GPU drivers significantly affect performance:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Keep Drivers Updated:</strong> Manufacturers optimize for new games</li>
+                        <li><strong>Test New Drivers:</strong> Benchmark to verify performance gains</li>
+                        <li><strong>Driver Settings:</strong> GPU control panels have optimization options</li>
+                        <li><strong>Driver Rollback:</strong> If new drivers cause issues, revert to stable versions</li>
+                    </ul>
+
+                    <h2>Common GPU Mistakes</h2>
+                    <p>
+                        Most players make these GPU optimization errors:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Maxing All Settings:</strong> Expecting high FPS with max GPU settings</li>
+                        <li><strong>Ignoring Resolution Impact:</strong> Not realizing resolution is the biggest factor</li>
+                        <li><strong>Outdated Drivers:</strong> Missing performance optimization opportunities</li>
+                        <li><strong>Overclocking Without Testing:</strong> Chasing performance without stability checks</li>
+                    </ul>
+
+                    <h2>What's Included in Our Pack</h2>
+                    <p>
+                        Our GPU Settings Guide covers:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Detailed GPU settings configurations for different hardware tiers</li>
+                        <li>Resolution and scaling recommendations</li>
+                        <li>Driver optimization strategies</li>
+                        <li>Performance benchmarking methodology</li>
+                        <li>Balancing quality with competitive performance</li>
+                    </ul>
+
+                    <div class="guide-cta" data-aos="fade-up">
+                        <h3>Ready to Optimize Your GPU?</h3>
+                        <p>Get our GPU Settings guide for complete optimization strategies.</p>
+                        <a href="/packs" class="btn btn-primary">View Packs</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="guide-sidebar" data-aos="fade-up" data-aos-delay="100">
+                <div class="sidebar-card">
+                    <h3>Quick Navigation</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#gpu">Understanding GPU</a></li>
+                        <li><a href="#categories">Setting Categories</a></li>
+                        <li><a href="#impact">Impact Hierarchy</a></li>
+                        <li><a href="#competitive">Competitive Settings</a></li>
+                        <li><a href="#drivers">Driver Optimization</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Guides</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="/guides/fps-boost">FPS Boost</a></li>
+                        <li><a href="/guides/advanced-tweaks">Advanced Tweaks</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card cta-card">
+                    <h3>FPS Boost Pack</h3>
+                    <p>Complete GPU optimization configuration included.</p>
+                    <a href="/packs" class="btn btn-primary btn-block">Learn More</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

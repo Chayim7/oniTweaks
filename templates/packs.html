@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Packs - Premium Fortnite Optimization | OniTweaks{% endblock %}
+{% block description %}Browse premium Fortnite optimization packs. Input delay reduction, FPS boost, controller feel, and complete bundles.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="packs-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Optimization Packs</h1>
+            <p>Premium configurations tested for competitive performance</p>
+        </div>
+    </div>
+</section>
+
+<!-- Packs Grid -->
+<section class="packs-section">
+    <div class="container">
+        <div class="packs-grid">
+            {% for pack in packs %}
+            <div class="pack-card-large" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+                <div class="pack-header">
+                    <div class="pack-tag">{{ pack.tag }}</div>
+                </div>
+
+                <div class="pack-body">
+                    <h2 class="pack-title">{{ pack.title }}</h2>
+                    <p class="pack-description">{{ pack.description }}</p>
+
+                    <div class="pack-features">
+                        <h3>What's Included</h3>
+                        <ul class="features-list">
+                            <li>✓ Complete configuration guide</li>
+                            <li>✓ Step-by-step optimization process</li>
+                            <li>✓ Tested settings and values</li>
+                            <li>✓ Installation support</li>
+                            <li>✓ Updates & improvements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pack-footer">
+                    <div class="pack-price-large">{{ pack.price }}</div>
+                    <button class="btn btn-primary btn-block" onclick="handlePackPurchase('{{ pack.id }}')">Get Pack</button>
+                    <a href="#" class="secondary-link">View Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- FAQ-like Section -->
+<section class="packs-info-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">How It Works</h2>
+
+        <div class="info-grid">
+            <div class="info-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="info-number">1</div>
+                <h3>Purchase Pack</h3>
+                <p>Choose the optimization pack that matches your needs and purchase instantly.</p>
+            </div>
+
+            <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-number">2</div>
+                <h3>Follow Steps</h3>
+                <p>Receive detailed guide with exact steps, settings, and values to apply.</p>
+            </div>
+
+            <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-number">3</div>
+                <h3>Apply Settings</h3>
+                <p>Apply the optimization pack to your system. Fully reversible if needed.</p>
+            </div>
+
+            <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="info-number">4</div>
+                <h3>Experience Improvement</h3>
+                <p>Enjoy reduced input delay, better FPS, smoother gameplay experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="comparison-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Compare Packs</h2>
+
+        <div class="comparison-table-container" data-aos="fade-up" data-aos-delay="100">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Input Delay</th>
+                        <th>FPS Boost</th>
+                        <th>Controller Feel</th>
+                        <th>Bundle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-name">Optimization Guide</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">System Configs</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Controller Settings</td>
+                        <td>✓</td>
+                        <td>-</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Advanced Tweaks</td>
+                        <td>-</td>
+                        <td>✓</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Video Walkthrough</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Priority Support</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="packs-cta-section">
+    <div class="container">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Never bought a pack before?</h2>
+            <p>Read our guides first to understand optimization fundamentals</p>
+            <a href="/guides/reduce-input-delay" class="btn btn-secondary">Start with Guides</a>
+        </div>
+    </div>
+</section>
+
+<script>
+function handlePackPurchase(packId) {
+    alert('Pack: ' + packId + ' - Purchase system coming soon');
+    // TODO: Connect to payment system (Stripe, Paddle, etc.)
+}
+</script>
+
+{% endblock %}

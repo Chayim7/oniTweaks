@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}Controller Settings Optimization Guide | OniTweaks{% endblock %}
+{% block description %}Learn how to optimize your controller settings for better aim, building, and competitive advantage in Fortnite.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="guide-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>{{ guide.title }}</h1>
+            <p>Understand controller optimization and why settings matter</p>
+        </div>
+    </div>
+</section>
+
+<!-- Guide Content -->
+<section class="guide-content-section">
+    <div class="container">
+        <div class="guide-wrapper">
+            <!-- Main Content -->
+            <div class="guide-main">
+                <article class="guide-article" data-aos="fade-up">
+                    <h2>What Are Controller Settings?</h2>
+                    <p>
+                        Controller settings in Fortnite are the configuration options that affect how your character responds 
+                        to your input. These include sensitivity, dead zones, response curves, and build/edit configurations.
+                    </p>
+                    <p>
+                        Understanding these settings is foundational to competitive play, but there's often confusion about 
+                        what actually affects performance versus what's just personal preference.
+                    </p>
+
+                    <h2>Why Controller Settings Matter</h2>
+                    <p>
+                        Your controller settings directly impact:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Aim Precision:</strong> Sensitivity and dead zones affect tracking accuracy</li>
+                        <li><strong>Building Speed:</strong> Button layout and edit settings influence building mechanics</li>
+                        <li><strong>Input Responsiveness:</strong> Response curves and dead zones affect feel</li>
+                        <li><strong>Consistency:</strong> Standardized settings enable muscle memory development</li>
+                    </ul>
+
+                    <h2>Key Controller Factors</h2>
+                    <p>
+                        When optimizing controller settings, these factors matter most:
+                    </p>
+
+                    <div class="guide-card">
+                        <h3>Sensitivity</h3>
+                        <p>
+                            Sensitivity determines how fast your in-game view moves relative to physical stick movement. 
+                            Lower sensitivity improves aim consistency, higher sensitivity improves flick shots. Most competitive 
+                            players use sensitivity between 8-12%.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Dead Zones</h3>
+                        <p>
+                            Dead zones are the range where stick input is ignored, reducing controller drift. Too large and 
+                            you lose precision. Too small and drift becomes problematic. Optimal dead zones are typically 5-8%.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Response Curves</h3>
+                        <p>
+                            Response curves change how sensitivity feels at different stick positions—linear, classic, or custom. 
+                            Linear is most common in competitive play because it provides consistent input scaling.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Build/Edit Controls</h3>
+                        <p>
+                            Your build and edit button layout significantly affects building speed and consistency. 
+                            Many competitive players use button remapping for faster building access.
+                        </p>
+                    </div>
+
+                    <h2>Common Mistakes</h2>
+                    <p>
+                        Most players make these mistakes with controller optimization:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Too High Sensitivity:</strong> Makes aim unpredictable and building inconsistent</li>
+                        <li><strong>Oversized Dead Zones:</strong> Reduces precision and makes aiming feel sluggish</li>
+                        <li><strong>Frequent Changes:</strong> Prevents muscle memory from developing</li>
+                        <li><strong>Ignoring Feel:</strong> Optimizing settings without considering personal comfort matters</li>
+                    </ul>
+
+                    <h2>Why Incomplete Optimization Fails</h2>
+                    <p>
+                        Just tweaking sensitivity isn't enough. Effective controller optimization requires:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Understanding how all settings interact</li>
+                        <li>Matching settings to your specific play style</li>
+                        <li>Consistent practice to build muscle memory</li>
+                        <li>Avoiding constant changes that prevent adaptation</li>
+                    </ul>
+
+                    <h2>What's Included in Our Pack</h2>
+                    <p>
+                        Our Controller Feel Pack goes beyond basic sensitivity recommendations. It provides:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Exact sensitivity, dead zone, and curve settings tested with multiple controllers</li>
+                        <li>Button remapping strategies for your specific build style</li>
+                        <li>Response curve explanations and comparisons</li>
+                        <li>Calibration process to ensure your controller performs optimally</li>
+                    </ul>
+
+                    <div class="guide-cta" data-aos="fade-up">
+                        <h3>Ready for Exact Optimization?</h3>
+                        <p>Get our Controller Feel Pack for complete configuration and testing insights.</p>
+                        <a href="/packs" class="btn btn-primary">View Packs</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="guide-sidebar" data-aos="fade-up" data-aos-delay="100">
+                <div class="sidebar-card">
+                    <h3>Quick Navigation</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#what">What Are Settings?</a></li>
+                        <li><a href="#why">Why They Matter</a></li>
+                        <li><a href="#factors">Key Factors</a></li>
+                        <li><a href="#mistakes">Common Mistakes</a></li>
+                        <li><a href="#pack">Our Pack</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Guides</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="/guides/reduce-input-delay">Reduce Input Delay</a></li>
+                        <li><a href="/guides/advanced-tweaks">Advanced Tweaks</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card cta-card">
+                    <h3>Controller Feel Pack</h3>
+                    <p>Get exact optimized settings for your controller.</p>
+                    <a href="/packs" class="btn btn-primary btn-block">Learn More</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

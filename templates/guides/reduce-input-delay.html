@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Reduce Input Delay Guide | OniTweaks{% endblock %}
+{% block description %}Complete guide to understanding and reducing input delay in Fortnite. Learn what causes latency and how to optimize.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="guide-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>{{ guide.title }}</h1>
+            <p>Understand latency factors and optimize for responsive gaming</p>
+        </div>
+    </div>
+</section>
+
+<!-- Guide Content -->
+<section class="guide-content-section">
+    <div class="container">
+        <div class="guide-wrapper">
+            <!-- Main Content -->
+            <div class="guide-main">
+                <article class="guide-article" data-aos="fade-up">
+                    <h2>What Is Input Delay?</h2>
+                    <p>
+                        Input delay is the time between when you press a button and when that action occurs in-game. 
+                        In competitive gaming, even small delays (10-50ms) noticeably impact performance.
+                    </p>
+                    <p>
+                        Input delay comes from multiple sources: your controller/mouse, hardware processing, game engine, 
+                        network connection, and display. Understanding each factor is critical for optimization.
+                    </p>
+
+                    <h2>Why Input Delay Matters in Fortnite</h2>
+                    <p>
+                        Fortnite is a fast-paced game where split-second reactions determine outcomes. Input delay affects:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Aiming:</strong> Delayed input makes tracking and flicking feel sluggish</li>
+                        <li><strong>Building:</strong> Delayed responses slow down build speed and edit execution</li>
+                        <li><strong>Combat Reaction:</strong> Slower response to enemy actions puts you at disadvantage</li>
+                        <li><strong>Consistency:</strong> Variable delay creates unpredictable gameplay feel</li>
+                    </ul>
+
+                    <h2>Sources of Input Delay</h2>
+                    <p>
+                        Input delay accumulates from multiple sources. Understanding each helps identify optimization opportunities:
+                    </p>
+
+                    <div class="guide-card">
+                        <h3>Controller Delay</h3>
+                        <p>
+                            Modern controllers vary in input latency (2-10ms). Wired controllers typically have less delay than wireless.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>System Processing Delay</h3>
+                        <p>
+                            Your PC/Console processes input and renders frames. Higher performance reduces this delay.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Game Engine Delay</h3>
+                        <p>
+                            Fortnite's engine processes input at specific intervals. Higher FPS can reduce perceived delay.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Network Latency (Ping)</h3>
+                        <p>
+                            Your connection to the server adds delay. Most players see 20-150ms ping. Even good connections add noticeable lag.
+                        </p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>Display Latency</h3>
+                        <p>
+                            Monitor response time (pixel change speed) adds delay. Gaming monitors (1-5ms) are faster than typical displays (20-50ms).
+                        </p>
+                    </div>
+
+                    <h2>What Actually Reduces Input Delay</h2>
+                    <p>
+                        Here are factors that genuinely impact input delay in Fortnite:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Higher FPS:</strong> More frames = less time between input and response</li>
+                        <li><strong>Lower Ping:</strong> Closer servers and optimized connection reduce network latency</li>
+                        <li><strong>Gaming Monitor:</strong> Lower response time reduces display delay</li>
+                        <li><strong>Wired Connection:</strong> Ethernet reduces network variance vs WiFi</li>
+                        <li><strong>USB Controller:</strong> Wired connection slightly reduces controller latency</li>
+                    </ul>
+
+                    <h2>Common Misconceptions</h2>
+                    <p>
+                        Many things are blamed for input delay but don't actually affect it much:
+                    </p>
+                    <ul class="guide-list">
+                        <li><strong>Game Settings:</strong> Graphics settings don't directly reduce input delay (though higher FPS does)</li>
+                        <li><strong>Controller Sensitivity:</strong> High or low sensitivity doesn't create delay</li>
+                        <li><strong>V-Sync On/Off:</strong> Modern V-Sync implementations don't add much delay</li>
+                    </ul>
+
+                    <h2>Why Incomplete Optimization Fails</h2>
+                    <p>
+                        Focusing on only one factor doesn't fully reduce input delay. Effective optimization addresses:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Hardware-level latency (monitor, controller)</li>
+                        <li>System performance (FPS consistency)</li>
+                        <li>Network optimization (ping stability)</li>
+                        <li>Game settings (configured for responsiveness)</li>
+                    </ul>
+
+                    <h2>What's Included in Our Pack</h2>
+                    <p>
+                        Our Input Delay Pack systematically addresses all latency sources:
+                    </p>
+                    <ul class="guide-list">
+                        <li>Fortnite game settings optimized for responsiveness</li>
+                        <li>GPU/CPU settings that minimize processing delay</li>
+                        <li>Network optimization strategies</li>
+                        <li>Controller configuration for minimal latency</li>
+                        <li>Hardware recommendations and benchmarks</li>
+                    </ul>
+
+                    <div class="guide-cta" data-aos="fade-up">
+                        <h3>Ready to Reduce Your Latency?</h3>
+                        <p>Get our Input Delay Pack for complete delay reduction strategies.</p>
+                        <a href="/packs" class="btn btn-primary">View Packs</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="guide-sidebar" data-aos="fade-up" data-aos-delay="100">
+                <div class="sidebar-card">
+                    <h3>Quick Navigation</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#what">What Is Delay?</a></li>
+                        <li><a href="#why">Why It Matters</a></li>
+                        <li><a href="#sources">Delay Sources</a></li>
+                        <li><a href="#actual">Actual Reducers</a></li>
+                        <li><a href="#misconceptions">Misconceptions</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Related Guides</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="/guides/fps-boost">FPS & Stability</a></li>
+                        <li><a href="/guides/network-optimization">Network</a></li>
+                        <li><a href="/guides/controller-settings">Controller Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card cta-card">
+                    <h3>Input Delay Pack</h3>
+                    <p>Complete delay reduction configuration and strategies.</p>
+                    <a href="/packs" class="btn btn-primary btn-block">Learn More</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

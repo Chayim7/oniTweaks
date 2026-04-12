@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Results & Proof - OniTweaks Optimization Showcase{% endblock %}
+{% block description %}Watch real before/after demonstrations of OniTweaks optimizations. See FPS improvements, input delay reduction, and gameplay enhancement.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="results-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Results & Proof</h1>
+            <p>Real before/after demonstrations of optimization impact</p>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="results-filters-section">
+    <div class="container">
+        <div class="filter-buttons" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">All Results</button>
+            <button class="filter-btn" data-filter="performance">Performance</button>
+            <button class="filter-btn" data-filter="controller-feel">Controller Feel</button>
+            <button class="filter-btn" data-filter="precision">Precision</button>
+            <button class="filter-btn" data-filter="network">Network</button>
+        </div>
+    </div>
+</section>
+
+<!-- Results Grid -->
+<section class="results-section">
+    <div class="container">
+        <div class="results-grid">
+            {% for result in results %}
+            <div class="result-showcase-card" data-category="{{ result.category.lower().replace(' ', '-') }}" data-aos="zoom-in" data-aos-delay="{{ loop.index0 % 2 * 100 }}">
+                <div class="result-video-container">
+                    <div class="result-video-placeholder">
+                        <div class="play-icon">▶️</div>
+                        <div class="placeholder-text">Video Coming Soon</div>
+                    </div>
+                    <div class="result-category-badge">{{ result.category }}</div>
+                </div>
+
+                <div class="result-content">
+                    <h3 class="result-title">{{ result.title }}</h3>
+                    <p class="result-description">{{ result.description }}</p>
+                    <a href="#" class="result-link">Watch Video →</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials/Trust Section -->
+<section class="results-trust-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">What Users Say</h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Noticeable improvement in aim consistency. The optimization pack was straightforward to follow."</p>
+                <p class="testimonial-author">- Competitive Player</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Finally, a professional approach to Fortnite optimization. No fluff, just results."</p>
+                <p class="testimonial-author">- Gaming Enthusiast</p>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The guides helped me understand what was actually affecting my performance. Worth it."</p>
+                <p class="testimonial-author">- Content Creator</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+                <div class="stat-number">+30%</div>
+                <div class="stat-description">Average FPS Improvement</div>
+            </div>
+
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stat-number">-15ms</div>
+                <div class="stat-description">Reduced Input Latency</div>
+            </div>
+
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stat-number">+45%</div>
+                <div class="stat-description">FPS Stability Improvement</div>
+            </div>
+
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stat-number">10K+</div>
+                <div class="stat-description">Optimizations Applied</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="results-cta-section">
+    <div class="container">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Ready to See Similar Results?</h2>
+            <p>Choose your optimization pack and start improving your competitive game today</p>
+            <div class="cta-buttons">
+                <a href="/packs" class="btn btn-primary">Browse Packs</a>
+                <a href="/guides/fps-boost" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-bg-accent"></div>
+</section>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter results
+        document.querySelectorAll('.result-showcase-card').forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.style.display = 'block';
+                setTimeout(() => card.classList.add('active'), 10);
+            } else {
+                card.classList.remove('active');
+                setTimeout(() => card.style.display = 'none', 300);
+            }
+        });
+    });
+});
+</script>
+
+{% endblock %}

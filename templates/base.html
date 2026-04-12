@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}OniTweaks - Fortnite Optimization & Performance{% endblock %}</title>
+    <meta name="description" content="{% block description %}Premium Fortnite performance optimization. Reduce input delay, boost FPS, improve controller feel.{% endblock %}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                <span class="logo-icon">⚡</span>
+                OniTweaks
+            </a>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/packs" class="nav-link">Packs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/results" class="nav-link">Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/tools" class="nav-link">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog" class="nav-link">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="navbar-toggle" id="navbarToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>OniTweaks</h4>
+                <p>Premium Fortnite optimization for competitive performance.</p>
+            </div>
+
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/packs">Packs</a></li>
+                    <li><a href="/results">Results</a></li>
+                    <li><a href="/tools">Tools</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h5>Guides</h5>
+                <ul>
+                    <li><a href="/guides/controller-settings">Controller Settings</a></li>
+                    <li><a href="/guides/reduce-input-delay">Reduce Input Delay</a></li>
+                    <li><a href="/guides/fps-boost">FPS Boost</a></li>
+                    <li><a href="/guides/network-optimization">Network Optimization</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 OniTweaks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', path='/js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
