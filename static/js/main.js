@@ -3,6 +3,48 @@
    ==================================== */
 
 // ====================================
+// Mouse Follower Effect
+// ====================================
+
+let mouseX = 0;
+let mouseY = 0;
+const follower = document.createElement('div');
+follower.className = 'mouse-follower';
+document.body.appendChild(follower);
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    follower.style.left = (mouseX - 20) + 'px';
+    follower.style.top = (mouseY - 20) + 'px';
+    follower.style.display = 'block';
+});
+
+document.addEventListener('mouseleave', () => {
+    follower.style.display = 'none';
+});
+
+// Interactive cursor effect on hover
+document.addEventListener('mousemove', (e) => {
+    const interactiveElements = document.querySelectorAll('.btn, .category-card, .pack-card, a');
+    interactiveElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isHovering = (
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom
+        );
+        
+        if (isHovering) {
+            // Add glow effect to hovered interactive element
+            el.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+            el.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+        }
+    });
+});
+
+// ====================================
 // Mobile Navigation Toggle
 // ====================================
 
