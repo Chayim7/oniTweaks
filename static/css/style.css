@@ -351,7 +351,7 @@ p {
    ==================================== */
 
 .hero {
-    padding: var(--spacing-2xl) 0;
+    padding: calc(var(--spacing-2xl) + 2rem) 0 4rem;
     position: relative;
     overflow: hidden;
     min-height: 70vh;
@@ -362,25 +362,51 @@ p {
 .hero-container {
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 .hero-content {
+    max-width: 920px;
+    margin: 0 auto;
     text-align: center;
+    background: linear-gradient(135deg, rgba(55, 65, 85, 0.85), rgba(88, 28, 135, 0.35), rgba(120, 130, 140, 0.85));
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 80px rgba(20, 25, 40, 0.45);
 }
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: var(--spacing-lg);
-    line-height: 1.2;
+    line-height: 1.1;
     animation: glow-pulse 3s ease-in-out infinite, blur-in 1s ease-out;
-    text-shadow: 0 0 20px rgba(75, 85, 99, 0.5), 0 0 40px rgba(102, 112, 133, 0.3);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.08), 0 0 40px rgba(110, 118, 143, 0.25);
+    color: #f9fafb;
+}
+
+.hero-info-section {
+    padding: 3rem 0 0;
+}
+
+.hero-info-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    border-radius: 1.75rem;
+    background: linear-gradient(135deg, rgba(44, 52, 69, 0.95), rgba(84, 64, 141, 0.4), rgba(112, 121, 134, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 30px 90px rgba(15, 20, 35, 0.45);
+    text-align: center;
 }
 
 .hero-subtitle {
-    font-size: var(--font-size-lg);
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-2xl);
+    font-size: 1.15rem;
+    color: rgba(248, 250, 252, 0.88);
+    max-width: 760px;
+    margin: 0 auto 1.8rem;
+    line-height: 1.75;
 }
 
 .hero-buttons {
@@ -388,7 +414,7 @@ p {
     gap: var(--spacing-md);
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-lg);
 }
 
 .hero-trust-badges {
@@ -396,30 +422,29 @@ p {
     gap: var(--spacing-lg);
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: var(--spacing-2xl);
+    margin-top: var(--spacing-lg);
 }
 
 .trust-badge {
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
-    padding: 0.75rem 1.5rem;
-    background: var(--glass-bg);
-    border: 1px solid var(--border-color-light);
-    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(40, 46, 64, 0.95), rgba(88, 28, 135, 0.35));
+    border: 1px solid rgba(94, 156, 255, 0.4);
+    border-radius: 1rem;
     font-size: var(--font-size-sm);
-    color: var(--text-secondary);
+    color: #f8fafc;
     transition: all 0.3s ease;
     cursor: pointer;
-    animation: floating 4s ease-in-out infinite;
+    box-shadow: 0 10px 35px rgba(20, 25, 40, 0.25);
 }
 
 .trust-badge:hover {
-    background: var(--glass-bg-strong);
-    border-color: var(--primary);
-    color: var(--primary);
-    box-shadow: 0 0 15px rgba(75, 85, 99, 0.4);
-    transform: translateY(-5px);
+    background: linear-gradient(135deg, rgba(55, 65, 85, 0.9), rgba(88, 28, 135, 0.55));
+    border-color: rgba(94, 156, 255, 0.75);
+    color: #ffffff;
+    transform: translateY(-4px);
 }
 
 .badge-icon {
