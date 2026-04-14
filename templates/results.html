@@ -33,21 +33,12 @@
     <div class="container">
         <div class="results-grid">
             {% for result in results %}
-            <div class="result-showcase-card" data-category="{{ result.category.lower().replace(' ', '-') }}" data-aos="zoom-in" data-aos-delay="{{ loop.index0 % 2 * 100 }}">
-                <div class="result-video-container">
-                    <div class="result-video-placeholder">
-                        <div class="play-icon">▶️</div>
-                        <div class="placeholder-text">Video Coming Soon</div>
-                    </div>
-                    <div class="result-category-badge">{{ result.category }}</div>
-                </div>
-
-                <div class="result-content">
-                    <h3 class="result-title">{{ result.title }}</h3>
-                    <p class="result-description">{{ result.description }}</p>
-                    <a href="#" class="result-link">Watch Video →</a>
-                </div>
-            </div>
+            <a href="#" class="site-card result-showcase-card" data-category="{{ result.category.lower().replace(' ', '-') }}" data-aos="zoom-in" data-aos-delay="{{ loop.index0 % 2 * 100 }}">
+                <div class="card-icon">🎥</div>
+                <h3 class="result-title">{{ result.title }}</h3>
+                <p>{{ result.description }}</p>
+                <span class="card-arrow">→</span>
+            </a>
             {% endfor %}
         </div>
     </div>
@@ -59,19 +50,19 @@
         <h2 class="section-title" data-aos="fade-up">What Users Say</h2>
 
         <div class="testimonials-grid">
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="site-card testimonial-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <p class="testimonial-text">"Noticeable improvement in aim consistency. The optimization pack was straightforward to follow."</p>
                 <p class="testimonial-author">- Competitive Player</p>
             </div>
 
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-card testimonial-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <p class="testimonial-text">"Finally, a professional approach to Fortnite optimization. No fluff, just results."</p>
                 <p class="testimonial-author">- Gaming Enthusiast</p>
             </div>
 
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="site-card testimonial-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <p class="testimonial-text">"The guides helped me understand what was actually affecting my performance. Worth it."</p>
                 <p class="testimonial-author">- Content Creator</p>
@@ -84,25 +75,33 @@
 <section class="stats-section">
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
-                <div class="stat-number">+30%</div>
-                <div class="stat-description">Average FPS Improvement</div>
-            </div>
+            <a href="/guides/fps-boost" class="site-card stat-card" data-aos="zoom-in" data-aos-delay="0">
+                <div class="card-icon">📊</div>
+                <h3>Average FPS Improvement</h3>
+                <p>Learn what impacts frame rates and FPS consistency in competitive gaming.</p>
+                <span class="card-arrow">→</span>
+            </a>
 
-            <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
-                <div class="stat-number">-15ms</div>
-                <div class="stat-description">Reduced Input Latency</div>
-            </div>
+            <a href="/guides/reduce-input-delay" class="site-card stat-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-icon">⚡</div>
+                <h3>Reduced Input Latency</h3>
+                <p>Understand latency factors and what actually affects your input responsiveness.</p>
+                <span class="card-arrow">→</span>
+            </a>
 
-            <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="stat-number">+45%</div>
-                <div class="stat-description">FPS Stability Improvement</div>
-            </div>
+            <a href="/guides/fps-boost" class="site-card stat-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-icon">📈</div>
+                <h3>FPS Stability Improvement</h3>
+                <p>Learn what impacts frame rates and FPS consistency in competitive gaming.</p>
+                <span class="card-arrow">→</span>
+            </a>
 
-            <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
-                <div class="stat-number">10K+</div>
-                <div class="stat-description">Optimizations Applied</div>
-            </div>
+            <a href="/packs" class="site-card stat-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card-icon">🔧</div>
+                <h3>Optimizations Applied</h3>
+                <p>Discover advanced optimization concepts beyond standard settings.</p>
+                <span class="card-arrow">→</span>
+            </a>
         </div>
     </div>
 </section>
@@ -144,6 +143,9 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         });
     });
 });
+
+    // Ensure all results are visible and styled on initial load
+    document.querySelectorAll('.result-showcase-card').forEach(card => card.classList.add('active'));
 </script>
 
 {% endblock %}

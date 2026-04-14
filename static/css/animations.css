@@ -133,40 +133,14 @@
 
 .hero-title {
     animation: glow-pulse 3s ease-in-out infinite, blur-in 1s ease-out;
-    text-shadow: 0 0 20px rgba(0, 217, 255, 0.5), 0 0 40px rgba(128, 0, 255, 0.3);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.18), 0 0 35px rgba(167, 139, 250, 0.18);
 }
 
 .section-title {
     animation: glow-text 3s ease-in-out infinite;
 }
 
-.btn-primary {
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transition: left 0.5s ease;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 217, 255, 0.5), 0 0 20px rgba(0, 217, 255, 0.3);
-}
+/* Button appearances are handled in style.css to preserve the unified theme */
 
 .trust-badge {
     animation: floating 4s ease-in-out infinite;
@@ -174,13 +148,9 @@
 }
 
 .trust-badge:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(0, 217, 255, 1);
-    color: rgba(0, 217, 255, 1);
-    box-shadow: 0 0 15px rgba(0, 217, 255, 0.4), inset 0 0 10px rgba(0, 217, 255, 0.1);
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(94, 156, 255, 0.25);
 }
-
 /* ====================================
    Card Enhancements
    ==================================== */
@@ -267,15 +237,7 @@
    Advanced Hover States
    ==================================== */
 
-.btn-secondary {
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(0, 217, 255, 1);
-    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
-}
+/* Secondary button appearance is handled in style.css */
 
 /* ====================================
    Reveal Effects
@@ -538,10 +500,6 @@ html {
 
 body {
     background: #000;
-    background-image: url('/static/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 .main-content {
@@ -584,26 +542,15 @@ body {
 
 /* Removed duplicate card styling - using style.css definitions */
 
-.btn {
-    position: relative;
-    border: 2px solid rgba(75, 85, 99, 0.5);
-    background: linear-gradient(135deg, rgba(75, 85, 99, 0.1), rgba(102, 112, 133, 0.05));
-    color: rgba(75, 85, 99, 0.9);
-}
-
-.btn:hover {
-    border-color: rgba(75, 85, 99, 0.9);
-    box-shadow: 0 0 15px rgba(75, 85, 99, 0.3),
-               inset 0 0 15px rgba(75, 85, 99, 0.05);
-}
+/* legacy .btn override removed so theme buttons stay consistent */
 
 /* ========================================
    NAVBAR STYLING
    ======================================== */
 
 .navbar {
-    border-bottom: 1px solid rgba(75, 85, 99, 0.2);
-    background: rgba(245, 246, 247, 0.95) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 14, 39, 0.95);
 }
 
 /* ======================================= 
@@ -615,10 +562,7 @@ body {
     letter-spacing: 2px;
 }
 
-.section-title {
-    position: relative;
-    color: #2d3748;
-}
+/* section-title color now lives in style.css */
 
 /* ========================================
    INPUT FIELDS
@@ -685,24 +629,7 @@ a:hover {
    FILTER BUTTONS
    ======================================== */
 
-.filter-btn {
-    border: 2px solid rgba(75, 85, 99, 0.3);
-    color: rgba(75, 85, 99, 0.6);
-    transition: all 0.3s ease;
-}
-
-.filter-btn:hover {
-    border-color: rgba(75, 85, 99, 0.6);
-    color: #2d3748;
-    box-shadow: 0 0 8px rgba(75, 85, 99, 0.2);
-}
-
-.filter-btn.active {
-    border-color: rgba(75, 85, 99, 0.8);
-    color: #2d3748;
-    box-shadow: 0 0 12px rgba(75, 85, 99, 0.3);
-}
-
+/* Legacy filter button overrides removed. Filter button theme is handled in style.css. */
 /* ========================================
    FOCUS STATES
    ======================================== */
